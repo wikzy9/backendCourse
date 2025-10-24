@@ -6,7 +6,7 @@ from fastapi.openapi.docs import (
 )
 
 
-from hotels import router as router_hotels
+from src.hotels import router as router_hotels
 
 
 app = FastAPI(docs_url=None, redoc_url=None)
