@@ -5,8 +5,12 @@ from fastapi.openapi.docs import (
     get_swagger_ui_oauth2_redirect_html,
 )
 
+import sys
+from pathlib import Path
 
-from src.hotels import router as router_hotels
+sys.path.append(str(Path(__file__).parent.parent))
+
+from src.api.hotels import router as router_hotels
 
 
 app = FastAPI(docs_url=None, redoc_url=None)
